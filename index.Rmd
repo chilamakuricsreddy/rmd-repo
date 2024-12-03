@@ -1,0 +1,221 @@
+---
+title: "RRR- session 1"
+author: "Chandra Chilamakuri"
+date: "3 Nov 2024"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+---
+
+
+
+# Introduction {#intro-link}
+
+## Headding 2
+You do not need to put footnotes at the end of the document for them to be rendered there [^1]. This example is rendered as follows:
+
+To indicate a footnote use1 and, for example, indicate another one as2 and then specify the wordings of the footnotes as:
+
+
+
+
+### Heading 3
+
+#### Heading 4
+
+#### Heading 5
+
+###### References
+
+
+
+
+## Formatting
+
+I am **Chandra Chilamakuri**
+
+I am __Chandra Chilamakuri__
+
+
+I am from *CRUK CI*
+
+I am from _CRUK CI_
+
+## Superscript
+
+2^100^
+
+## Subscript
+
+beta~1~
+
+
+~~This is wrong~~
+
+
+
+
+I am chandra chilamakuri
+\
+\
+\
+\
+\
+\
+I am from CRUKCI
+
+
+
+## Headding 2
+
+### Heading 3
+
+#### Heading 4
+
+#### Heading 5
+
+###### References
+
+
+
+
+## Formatting
+
+I am **Chandra Chilamakuri**
+
+I am __Chandra Chilamakuri__
+
+
+I am from *CRUK CI*
+
+I am from _CRUK CI_
+
+## Superscript
+
+2^100^
+
+## Subscript
+
+beta~1~
+
+
+~~This is wrong~~
+
+
+
+
+I am chandra chilamakuri
+\
+\
+\
+\
+\
+\
+I am from CRUKCI
+
+
+
+## Headding 2
+
+### Heading 3
+
+#### Heading 4
+
+#### Heading 5
+
+###### References
+
+
+
+
+## Formatting
+
+I am **Chandra Chilamakuri**
+
+I am __Chandra Chilamakuri__
+
+
+I am from *CRUK CI*
+
+I am from _CRUK CI_
+
+## Superscript
+
+2^100^
+
+## Subscript
+
+beta~1~
+
+
+~~This is wrong~~
+
+
+
+
+I am chandra chilamakuri
+\
+\
+\
+\
+\
+\
+I am from CRUKCI
+
+[Go to Intro](#intro-link)
+
+
+[Link Sanger](https://www.sanger.ac.uk/)
+
+
+[^1]: This is my first foot notes
+
+
+## Ordered Lists
+
+1. Item 1
+2. Item 2
+    a. Itema 2 a
+    b. Item 2 b
+3. Item 3
+    i. Item 3 i
+    ii. Item 3 ii
+    
+## Unordered list
+
+* Item 1
+  * A
+  * B
+  * C
+* Item 2
+* Item 3
+
+
+## Tasks list
+
+- [x] Task 1
+- [x] Task 2
+- [x] Task 3
+
+## Inserting images
+
+![Rlogo](download.png)
+
+## Tables
+
+|Clolumn 1|Clolumn 2|
+|:---------|:---------|
+|r1c1     |   r1c2  | 
+|r2 c1    | r2 c2   |
+
+
+
+## Blocks
+
+```
+plot(1:100)
+hist(rnorm(1000))
+
+```

@@ -1,0 +1,80 @@
+---
+title: "play with rmd"
+author: "Chandra Chilamakuri"
+date: "2024-12-03"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r scatter}
+plot(1:100)
+```
+
+```{r download}
+download.file(url="https://raw.githubusercontent.com/cambiotraining/reproducibility-training/master/data/gapminder_data.csv", destfile="data/gapminder_data.csv")
+```
+
+
+```{r plot_hist}
+hist( rnorm(1000), col='red')
+```
+
+
+
+```{r load_data}
+
+library(tidyverse) # used for data manipulation
+library(rmarkdown) # used for paged_table function
+library(kableExtra) # used for table
+library(ggpubr) #used for ggarrange function 
+
+#read file into R
+pop_data <- read_csv("data/gapminder_data.csv")
+
+#create a table with data from European countries in 2007 showing the countries 
+#with the largest life expectancy at the top 
+euro_data_tbl <- pop_data %>% 
+                    filter(continent == "Europe" & year == 2007) %>% 
+                    select(-continent, -year) %>% 
+                    arrange(desc(lifeExp)) %>% 
+                    rename(Country = country, "Population Size" = pop, 
+                      "Life Expectancy" = lifeExp, "GDP" = gdpPercap)
+
+```
+
+
+## Table
+
+```{r}
+euro_data_tbl %>% 
+  kbl() 
+```
+
+```{r}
+euro_data_tbl %>% 
+  kbl() %>% 
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+
+```{r}
+library(DT)
+euro_data_tbl %>% 
+  datatable()
+```
+
+
+
+```{r vio_plot}
+p = pop_data %>% 
+  filter(continent == 'Europe') %>% 
+  ggplot(aes( x= year, y = lifeExp, group=year)) +
+  geom_violin()
+print(p)
+```
+
+
